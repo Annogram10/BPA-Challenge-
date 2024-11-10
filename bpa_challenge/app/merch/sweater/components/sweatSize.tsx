@@ -26,7 +26,7 @@ const SweatSize: React.FC<SweatSizeProps> = ({ selectedSize, onSizeSelect, quant
     <div className="flex items-center space-x-4">
       {/* Size buttons */}
       <div className="flex space-x-4">
-        {['S', 'M', 'L', 'XL'].map((size: string) => (
+        {['S', 'M', 'L'].map((size: string) => (
           <button
             key={size}
             aria-pressed={selectedSize === size ? 'true' : 'false'}

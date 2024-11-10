@@ -1,15 +1,13 @@
-'use client'
+"use client"
 import React, { useState } from 'react';
 
-const HoodImg = () => {
-  // Manage the current image index
+const SweatImg = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Image URLs: Add your image files here
+  // Array of image sources
   const images = [
-    "/frontHoodie.jpeg",   // First image
-    "/backHoodie.jpeg",  // Second image (Replace with your second image file)
-    // Add more images if needed
+    "/frontSweater.jpeg",   // Replace with your first image
+    "/backSweater.jpeg"   // Replace with your second image
   ];
 
   // Next and previous image logic
@@ -24,7 +22,7 @@ const HoodImg = () => {
   };
 
   return (
-    <div className="relative w-full h-full bg-gray-300 rounded-lg overflow-hidden">
+    <div className="relative w-full h-[80vh] bg-gray-300 rounded-lg overflow-hidden flex-shrink-0">
       {/* Left Arrow */}
       <button 
         onClick={prevImage} 
@@ -34,9 +32,8 @@ const HoodImg = () => {
       </button>
 
       {/* Image */}
-      {/* Ensure the image takes up full width and height */}
       <img 
-        src={images[currentImageIndex]}  // This is where the src points to the image file path
+        src={images[currentImageIndex]} // Add your image paths here
         alt="Product" 
         className="w-full h-full object-cover" 
       />
@@ -52,4 +49,4 @@ const HoodImg = () => {
   );
 };
 
-export default HoodImg;
+export default SweatImg;

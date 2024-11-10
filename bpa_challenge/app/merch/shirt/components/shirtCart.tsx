@@ -1,8 +1,10 @@
+// ShirtCart.tsx
 'use client'
 import React, { useState } from 'react';
 import { useCart } from '@/app/context/CartContext';
-import SweatSize from './sweatSize';
-const SweatCart = () => {
+import ShirtSize from './shirtSize';
+
+const ShirtCart = () => {
   const { addToCart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
@@ -19,9 +21,9 @@ const SweatCart = () => {
 
     const newItem = {
       id: Date.now(),
-      title: 'Sweatpants',
-      price: 39.99, // Price for sweatpants
-      quantity: quantity,  // Use selected quantity
+      title: 'Shirt',
+      price: 30,  // Adjust the price for shirts if different
+      quantity: quantity,
       size: selectedSize,
     };
 
@@ -32,7 +34,7 @@ const SweatCart = () => {
   return (
     <div>
       <h2>Select Size:</h2>
-      <SweatSize selectedSize={selectedSize} onSizeSelect={setSelectedSize} quantity={quantity} setQuantity={setQuantity} />
+      <ShirtSize selectedSize={selectedSize} onSizeSelect={setSelectedSize} quantity={quantity} setQuantity={setQuantity} />
 
       <button className="btn btn-wide mt-4" onClick={handleAddToBag}>Add to Bag</button>
 
@@ -49,4 +51,4 @@ const SweatCart = () => {
   );
 };
 
-export default SweatCart;
+export default ShirtCart;

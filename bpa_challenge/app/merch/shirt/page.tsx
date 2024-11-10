@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from '@/app/components/navbar';
-import HoodImg from './components/hoodImg';
-import HoodTitle from './components/hoodTitle';
-import HoodSize from './components/hoodSize';
-import HoodInfo from './components/hoodInfo';
-import HoodCart from './components/hoodCart';
+import ShirtImg from './components/shirtImg';  // Assuming you have a similar component for shirt images
+import ShirtTitle from './components/shirtTitle';  // Assuming you have a similar component for shirt title
+import ShirtSize from './components/shirtSize';  // Assuming a size selector for shirt
+import ShirtInfo from './components/shirtInfo';  // Assuming you have a component for shirt details
+import ShirtCart from './components/shirtCart';  // Assuming a cart component for shirt
 
 const Page = () => {
   return (
@@ -15,14 +15,14 @@ const Page = () => {
           
           {/* Image section */}
           <div className="flex-shrink-0 w-full sm:w-1/2 h-[80vh] bg-gray-300 rounded-lg overflow-hidden">
-            <HoodImg />
+            <ShirtImg />
           </div>
 
           {/* Details section */}
           <div className="flex flex-col items-center sm:items-start w-full sm:w-1/2 space-y-4">
-            <HoodTitle />
-            <HoodInfo />
-            <HoodCart />
+            <ShirtTitle />
+            <ShirtInfo />
+            <ShirtCart />
           </div>
         </div>
       </div>
