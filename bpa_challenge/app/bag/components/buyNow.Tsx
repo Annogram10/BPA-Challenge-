@@ -1,10 +1,15 @@
+'use client'
 import React from 'react'
+import Link from 'next/link';
 
 const BuyNow = () => {
   return (
-    <button className="btn btn-primary mt-4">
-      Buy Now
-    </button>
+<Link href="/buyNow">
+  <button className="btn btn-primary mt-4">
+    Buy Now
+  </button>
+</Link>
+
 
     )
 }

@@ -1,9 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import { useCart } from '@/app/context/CartContext';
-import HoodSize from './hoodSize';
-
-const HoodCart = () => {
+import SweatSize from './sweatSize';
+const SweatCart = () => {
   const { addToCart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
@@ -20,8 +19,8 @@ const HoodCart = () => {
 
     const newItem = {
       id: Date.now(),
-      title: 'Hoodie',
-      price: 45,
+      title: 'Sweatpants',
+      price: 39.99, // Price for sweatpants
       quantity: quantity,  // Use selected quantity
       size: selectedSize,
     };
@@ -30,13 +29,10 @@ const HoodCart = () => {
     openModal();
   };
 
-  const incrementQuantity = () => setQuantity((prev) => Math.min(10, prev + 1));
-  const decrementQuantity = () => setQuantity((prev) => Math.max(1, prev - 1));
-
   return (
     <div>
       <h2>Select Size:</h2>
-      <HoodSize selectedSize={selectedSize} onSizeSelect={setSelectedSize} quantity={quantity} setQuantity={setQuantity} />
+      <SweatSize selectedSize={selectedSize} onSizeSelect={setSelectedSize} quantity={quantity} setQuantity={setQuantity} />
 
       <button className="btn btn-wide mt-4" onClick={handleAddToBag}>Add to Bag</button>
 
@@ -53,4 +49,4 @@ const HoodCart = () => {
   );
 };
 
-export default HoodCart;
+export default SweatCart;

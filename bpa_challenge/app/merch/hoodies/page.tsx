@@ -24,8 +24,6 @@ const Product = () => {
           {/* Item Info */}
           <HoodInfo />
 
-          {/* Size selector */}
-          <HoodSize />
 
           {/* Add to Cart button */}
           <HoodCart />

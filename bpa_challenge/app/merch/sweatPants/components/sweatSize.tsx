@@ -1,14 +1,14 @@
-'use client'
+"use client"
 import React from 'react';
 
-interface HoodSizeProps {
+interface SweatSizeProps {
   selectedSize: string | null;
   onSizeSelect: (size: string | null) => void;
   quantity: number;
   setQuantity: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const HoodSize: React.FC<HoodSizeProps> = ({ selectedSize, onSizeSelect, quantity, setQuantity }) => {
+const SweatSize: React.FC<SweatSizeProps> = ({ selectedSize, onSizeSelect, quantity, setQuantity }) => {
 
   const handleSizeClick = (size: string) => {
     onSizeSelect(selectedSize === size ? null : size);
@@ -26,7 +26,7 @@ const HoodSize: React.FC<HoodSizeProps> = ({ selectedSize, onSizeSelect, quantit
     <div className="flex items-center space-x-4">
       {/* Size buttons */}
       <div className="flex space-x-4">
-        {['S', 'M', 'L'].map((size: string) => (
+        {['S', 'M', 'L', 'XL'].map((size: string) => (
           <button
             key={size}
             aria-pressed={selectedSize === size ? 'true' : 'false'}
@@ -60,4 +60,4 @@ const HoodSize: React.FC<HoodSizeProps> = ({ selectedSize, onSizeSelect, quantit
   );
 };
 
-export default HoodSize;
+export default SweatSize;
