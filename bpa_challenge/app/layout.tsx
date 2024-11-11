@@ -33,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CartProvider>
+          <div className="fixed inset-0 border-8 border-zinc-800 rounded-xl pointer-events-none"></div>
           {children}
         </CartProvider>
       </body>

@@ -12,7 +12,7 @@ const Page = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
       <Navbar /> {/* Navbar stays at the top without padding */}
-      <div className="flex-grow flex flex-col items-center px-4 py-14"> {/* Set equal padding */}
+      <div className="flex-grow flex flex-col items-center px-4 py-5"> {/* Set equal padding */}
         <div >
           <AboutUs/>
         </div>

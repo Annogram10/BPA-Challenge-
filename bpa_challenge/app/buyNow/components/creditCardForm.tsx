@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 type FormErrors = {
   email: string;
@@ -67,13 +68,15 @@ const CheckoutForm = () => {
     }
   };
 
+  // Check if there are any errors
+  const hasErrors = Object.values(errors).some((error) => error !== '');
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <form onSubmit={handleFormSubmit} className="bg-white shadow-md rounded-lg p-8 max-w-screen-lg w-full">
         <h2 className="text-2xl font-semibold text-center mb-6">Checkout Information</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
           {/* Left Side (Contact and Address Info) */}
           <div>
             <div className="mb-4">
@@ -229,19 +232,27 @@ const CheckoutForm = () => {
                   value={cvv}
                   onChange={(e) => setCvv(e.target.value)}
                   className="input input-bordered w-full"
-                  placeholder="123"
+                  placeholder="CVV"
                   maxLength={3}
                 />
                 {errors.cvv && <p className="text-red-500 text-xs mt-1">{errors.cvv}</p>}
               </div>
             </div>
           </div>
-
         </div>
 
-        <button type="submit" className="btn btn-primary w-full mt-6">
-          Complete Purchase
-        </button>
+        {/* Submit Button */}
+        <div className="mt-8">
+          <Link href="/thankYou">
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-2 px-4 rounded mt-6"
+              disabled={hasErrors} // Disable the button if there are errors
+            >
+              Complete Purchase
+            </button>
+          </Link>
+        </div>
       </form>
     </div>
   );
