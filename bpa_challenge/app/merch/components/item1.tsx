@@ -33,7 +33,7 @@ const Item1 = () => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">Hoodies</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <p>Perfect during the cold $49.99</p>
         <div className="card-actions justify-end">
           <li className="btn btn-primary"><a href="merch/hoodies">Buy now</a></li>
         </div>

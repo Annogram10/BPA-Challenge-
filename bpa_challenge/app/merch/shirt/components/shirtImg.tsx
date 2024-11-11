@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 const SweatImg = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    "/frontSweat.jpeg",   // Replace with your image file
-    "/backSweat.jpeg",    // Replace with your image file
+    "/frontShirt.jpeg",   // Replace with your image file
+    "/backShirt.jpeg",    // Replace with your image file
   ];
 
   const nextImage = () => {

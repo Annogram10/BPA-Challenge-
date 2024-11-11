@@ -5,7 +5,7 @@ import ShirtTitle from './components/shirtTitle';  // Assuming you have a simila
 import ShirtSize from './components/shirtSize';  // Assuming a size selector for shirt
 import ShirtInfo from './components/shirtInfo';  // Assuming you have a component for shirt details
 import ShirtCart from './components/shirtCart';  // Assuming a cart component for shirt
-
+import ShirtMat from './components/shirtMat';
 const Page = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
@@ -23,6 +23,7 @@ const Page = () => {
             <ShirtTitle />
             <ShirtInfo />
             <ShirtCart />
+            <ShirtMat/>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const ShirtCart = () => {
     const newItem = {
       id: Date.now(),
       title: 'Shirt',
-      price: 30,  // Adjust the price for shirts if different
+      price: 29.99,  // Adjust the price for shirts if different
       quantity: quantity,
       size: selectedSize,
     };

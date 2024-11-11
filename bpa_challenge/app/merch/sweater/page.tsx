@@ -5,7 +5,7 @@ import SweatTitle from './components/sweatTittle';
 import SweatSize from './components/sweatSize';
 import SweatInfo from './components/sweatInfo';
 import SweatCart from './components/sweatCart';
-
+import SweatMat from './components/sweatMat';
 const Page = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
@@ -23,6 +23,7 @@ const Page = () => {
             <SweatTitle />
             <SweatInfo />
             <SweatCart /> 
+            <SweatMat/>
           </div>
         </div>
       </div>

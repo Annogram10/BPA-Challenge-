@@ -6,7 +6,7 @@ const SweatImg = () => {
 
   // Array of image sources
   const images = [
-    "/frontSweater.jpeg",   // Replace with your first image
+    "/frontSweater.jpg",   // Replace with your first image
     "/backSweater.jpeg"   // Replace with your second image
   ];
 

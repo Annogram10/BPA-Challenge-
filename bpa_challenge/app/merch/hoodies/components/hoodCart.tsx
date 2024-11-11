@@ -21,7 +21,7 @@ const HoodCart = () => {
     const newItem = {
       id: Date.now(),
       title: 'Hoodie',
-      price: 45,
+      price: 49.99,
       quantity: quantity,  // Use selected quantity
       size: selectedSize,
     };

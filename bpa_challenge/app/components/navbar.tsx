@@ -1,5 +1,5 @@
-"use client"
-import React from 'react'
+'use client'
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
@@ -7,7 +7,16 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <Link href="/" className="btn btn-ghost text-xl">daisyUI</Link>
+        {/* Link with downloadable image */}
+        <Link href="/" className="btn btn-ghost text-xl">
+          {/* Image as a logo with rounded corners */}
+          <img 
+            src="/logo.jpeg"  // Replace with your image path
+            alt="Logo"
+            style={{ height: '40px', width: 'auto' }} // Adjust size as needed
+            className="no-underline rounded-lg" // Removes any underlines and adds rounded corners
+          />
+        </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
@@ -29,7 +38,7 @@ const Navbar = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;

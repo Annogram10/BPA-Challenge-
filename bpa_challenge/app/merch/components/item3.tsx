@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Item3 = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ["/frontShirt.jpeg", "/backHoodie.jpeg"];
+  const images = ["/frontShirt.jpeg", "/backshirt.jpeg"];
 
   const nextImage = () => setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   const prevImage = () => setCurrentImageIndex((prevIndex) => prevIndex === 0 ? images.length - 1 : prevIndex - 1);
@@ -33,8 +33,8 @@ const Item3 = () => {
         </button>
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Hoodies</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <h2 className="card-title">Shirt</h2>
+        <p>A staple clothing peice, can't go outside without it! $29.99</p>
         <div className="card-actions justify-end">
           <Link href="/merch/shirt">
             <button className="btn btn-primary">Buy now</button>

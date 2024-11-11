@@ -5,7 +5,7 @@ import HoodTitle from './components/hoodTitle';
 import HoodSize from './components/hoodSize';
 import HoodInfo from './components/hoodInfo';
 import HoodCart from './components/hoodCart';
-
+import HoodMat from './components/hootMat'
 const Page = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
@@ -23,6 +23,7 @@ const Page = () => {
             <HoodTitle />
             <HoodInfo />
             <HoodCart />
+            <HoodMat/>
           </div>
         </div>
       </div>
