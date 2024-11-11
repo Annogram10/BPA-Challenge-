@@ -1,6 +1,5 @@
 'use client'
 import { useState } from "react";
-
 export default function Home() {
   const [selectedDate, setSelectedDate] = useState<keyof typeof ticketOptions | null>(null); // Holds selected date information
   const [generalAdmissionQty, setGeneralAdmissionQty] = useState(1);

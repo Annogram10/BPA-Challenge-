@@ -35,7 +35,7 @@ const Item1 = () => {
         <h2 className="card-title">Hoodies</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div className="card-actions justify-end">
-          <li className="btn btn-primary"><a href="/hoodies">Buy now</a></li>
+          <li className="btn btn-primary"><a href="merch/hoodies">Buy now</a></li>
         </div>
       </div>
     </div>
