@@ -21,7 +21,7 @@ const Navbar = () => {
             <Link href="/merch">Merch</Link>
           </li>
           <li>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/contactUs">Contact Us</Link>
           </li>
           <li>
             <Link href="/bag">Cart</Link>
